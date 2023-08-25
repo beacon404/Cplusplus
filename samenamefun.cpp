@@ -67,17 +67,19 @@ int main ()
     else if(user == "cylinder" )
     {
         cout << "Enter height and radius for cylinder.";
-        cin >> h >> r; double v2 = ns1::volume(h,r);
+        cin >> h >> r; 
+        double v2 = ns1::volume(h,r);
         double v5 = ns2::SurfaceArea(h,r);
          cout << v2 << '\n' << v5;
-    }
+    } 
     else if( user == "pyramid")
    {
         cout << "Enter length, width and height for pyramid.";
         cin >> l >> w >> h1;
         double v3 = ns1::volume(l,w,h1);
         double v6 = ns2::SurfaceArea(l,w,h1);
-        cout << v3 << '\n' << v6;
+        cout << v3 << '\n';
+        cout << v6;
     }
     else
     {
