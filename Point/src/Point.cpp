@@ -1,11 +1,11 @@
 #include<iostream>
-#include<math.h>
+#include<cmath>
 
-#include "Point.h" 
+#include "point.h" 
 
 void Point::setCoordinates(double x, double y)
  {
-    this->x = x;
+    this ->x = x;
     this ->y = y;
  }
 double Point::distanceFrom(const Point &anotherPoint)

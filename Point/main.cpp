@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "point.h"
 
 int main()
 {
@@ -21,13 +22,13 @@ int main()
 // #include<math.h>
 // #include"point.cpp"
 
-// int main()
+// int main()               
 // {
 //     Point p1;
 //     p1.setCoordinates(10,20);
 
 //     Point p2;
-//     p2.setCoordinates(0,10);
+//     p2.setCoordinates(0,10);   
 //     std::cout << "Distance =" << p1.distanceFrom(p2) << std::endl;
 //     return 0;
  
