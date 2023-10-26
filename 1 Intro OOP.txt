@@ -1,35 +1,42 @@
 Chapter 1: Introduction to Object-Oriented Programming:
 
-**Flashcard 1: Programming Paradigms**
+Programming Paradigms
+#####################
+
 - Programming Paradigms: Classify programming languages based on their features.
+
 - Imperative Programming: Specifies how to do something, e.g., C, C++.
 - Declarative Programming: Declares what needs to happen, e.g., SQL, HTML.
 
-**Flashcard 2: Procedural Programming**
-- In procedural programming, problems are decomposed into repeatable procedures.
+Procedural Programming
+######################
+
+- In procedural programming, problems are decomposed into repeatable procedures/smaller unit of repeatable activities.
 - Focus on processes, no information hiding, difficult for large programs.
 
-**Flashcard 3: Object-Oriented Programming (OOP)**
+Object-Oriented Programming (OOP)
+#################################
+
 - OOP combines data (attributes) and functions (behavior) into objects.
 - Objects are instances of classes, which are templates for objects.
 - OOP focuses on objects, not just operations.
 
-**Flashcard 4: What Becomes Objects in OOP?**
+What Becomes Objects in OOP?
+############################
 
 - Objects can represent human entities, physical objects, computer-user environment elements, data storage constructs, and more.
 
 
-
-**Flashcard 5: Principles of OOP**
+Principles of OOP
+##################
 
 - Encapsulation: Bundling data with methods and hiding data.
 - Abstraction: Providing essential information, hiding implementation.
 - Inheritance: Deriving properties from another class.
 - Polymorphism: Processing objects differently based on their data type.
 
-
-
-**Flashcard 6: Benefits of OOP**
+Benefits of OOP
+################################
 
 - Reusability: Classes can be used in different programs.
 - Robustness: Supports exception and error handling.
