@@ -1,7 +1,69 @@
-Sure, here are some flashcards summarizing the key points from the information you provided:
 
-**Flashcard 1:**
-- **Compound Type: Function**
+# How C++ Works
+
+- source code files
+-preprocessing - modify above file to preprocessor directives(such as #incldue etc)
+- Compilation assembly - machine languages code
+- linking - links the object code with the libraries and produce a single executable file.
+- Executable program 
+
+
+
+#############################################
+
+## Basic terms 
+
+
+
+● Keywords - char , double, while , namespace
+● Identifiers - it is use to name object,reference,functions,enumerators,types, class Member 
+● Data types - 
+● Variables
+● Constants
+● Operators
+● Expressions
+● Statements
+● Reference variables
+● Inline functions
+● Function overloading
+
+
+
+################################
+
+Compound Type: 
+
+
+1. Array - same type info store in a array 
+
+###########
+2. Reference - A reference variable provides an alias for a previously defined variable.
+example : int &b = a ; // not a pointer ,pointer use *
+
+why pass by reference? 
+-It eliminates the copying of object parameters back and forth.
+
+#############
+
+Pointer 
+
+- variable that store address
+-  example :  int *ptr =&a;
+
+another: int a = 5;
+int* ptr = &a; // ptr points to a
+*ptr = 10; // a's value will now be 10
+
+int b = *ptr; // A new variable b will be created.
+// a's value will be copied to b
+
+
+- addition and subtraction can be done
+ example : ++mylong bhayo bhane memory address tyaka agadi ko naya ma jancha, I mean tyo ni add huncha
+
+
+
+
 - Function type depends on parameter and return types.
 - Example:
 ```cpp
