@@ -62,6 +62,20 @@ int b = *ptr; // A new variable b will be created.
  example : ++mylong bhayo bhane memory address tyaka agadi ko naya ma jancha, I mean tyo ni add huncha
 
 
+- new for dynamic memory allocation and delete for free memory
+- 
+
+Function Pointer
+#################
+
+- function can be treated as data that can be be assigned to a variable or parameter
+- example:
+            int (*F)(int);
+            F=func1
+            std::cout<<F(100)<< std::end1
+
+
+
 
 
 - Function type depends on parameter and return types.
@@ -72,8 +86,10 @@ F = func1;
 F = func2;
 ```
 
-**Flashcard 2:**
-- **Compound Type: Enumeration**
+
+Enumeration
+############
+
 - Enumerated types have custom identifiers.
 - Values implicitly convertible to integers.
 - Example:
@@ -83,26 +99,34 @@ colors_t mycolor;
 mycolor = blue;
 ```
 
-**Flashcard 3:**
-- **Variables: Declaration**
+
+Variables: Declaration
+#########################
+
 - C++ requires variable declaration with type.
 - Example:
 ```cpp
 int x, y;
 ```
 
-**Flashcard 4:**
-- **Variables: Initialization**
+
+Variables: Initialization
+###########################
+
 - Three ways to initialize variables.
+
 - Example:
 ```cpp
-int x = 1;
-int y(1);
-int z{1};
+int x = 1; //Copy initialize an integers
+int y(1);    // Direct initialize an integer
+int z{1};  //Uniform initialization of an integer
+
 ```
 
-**Flashcard 5:**
-- **Constants: Literals**
+
+Constants: Literals
+###################
+
 - Express specific values in code.
 - Examples: Integer, Floating-Point, Character, Boolean, nullptr.
 ```cpp
@@ -112,13 +136,18 @@ char c = 'A';
 bool d = true;
 ```
 
-**Flashcard 6:**
-- **Constants: Typed Constant Expressions**
+
+Constants: Typed Constant Expressions
+########################################
+
 - Constants that cannot be modified.
 - Example: `const int a = 5;`
+#define MAX 10 // Defines a constant MAX whose value is 10
 
-**Flashcard 7:**
-- **Operators: Assignment and Arithmetic**
+
+Operators: Assignment and Arithmetic
+#####################################
+
 - Assignment (`=`), Addition (`+`), Subtraction (`-`), Multiplication (`*`), Division (`/`), Modulo (`%`).
 - Examples:
 ```cpp
@@ -126,8 +155,9 @@ x = 1;
 x = x + 2;
 ```
 
-**Flashcard 8:**
-- **Operators: Relational and Logical**
+Operators: Relational and Logical
+#################################
+
 - Relational (`==`, `!=`, `<`, `>`, `<=`, `>=`) and Logical (`&&`, `||`, `!`).
 - Examples:
 ```cpp
@@ -135,8 +165,8 @@ if (x == y)
 if (x && y)
 ```
 
-**Flashcard 9:**
-- **Operators: Conditional and Bitwise**
+Operators: Conditional and Bitwise
+#####################################
 - Conditional (`? :`) and Bitwise (`&`, `|`, `^`, `~`, `<<`, `>>`).
 - Examples:
 ```cpp
@@ -144,80 +174,176 @@ int a = (x > y) ? x : y;
 int b = x & y;
 ```
 
-**Flashcard 10:**
-- **Operators: Others**
+
+Operators: Others
+#################
+
 - Special (`sizeof`, `typeid`, `new`, `delete`) and Member Access (`a.b`, `a->b`, `a.*b`, `a->*b`).
 - Example:
 ```cpp
 int size = sizeof(int);
 ```
 
+Operator Precedence
+####################
 
-Sure, here are flashcards summarizing the key points from the lecture notes on C++ programming:
 
-**Flashcard 1**
-- **Topic**: C++ Myths vs Reality
-- **Myth**: C++ is only used in legacy systems.
-- **Reality**: C++ is used in various domains, including system programming, databases, graphics, embedded systems, high-level libraries, interpreters, compilers, and more.
+-A single expression may contain multiple operators.
+Example expressions: y = 2 + 10 / 5; and z = 7 + 4 ^ 3;
 
-**Flashcard 2**
-- **Topic**: C vs C++
-- **Myth**: C is a subset of C++.
-- **Reality**: C and C++ are different languages that evolved separately, although C++ started as a fork of early C.
+Values:
 
-**Flashcard 3**
-- **Topic**: Compilers
-- Computers understand only machine language.
-- Compilers translate high-level language programs into machine code for execution.
+    y: The value of y is 4 because division has higher precedence than addition.
+    z: The value of z is 11 because the XOR operator (^) has lower precedence than addition.
 
-**Flashcard 4**
-- **Topic**: How C++ Works
-- The C++ compilation process involves preprocessing, compilation and assembly, and linking.
-- Preprocessor directives, such as #include and #define, modify the source code.
-- Compilation generates object files with machine code, which are then linked into an executable.
+Expressions
+##############
 
-**Flashcard 5**
-- **Topic**: A Simple C++ Program
-- Example program:
-```cpp
-#include <iostream>
+Definition:
 
-int main() {
-    std::cout << "Hello World!" << std::endl;
-    std::cin.get();
+    An expression is a sequence of operators and operands that specifies a computation.
+    Operators can be unary, binary, or ternary.
+
+Examples:
+
+    a + b
+    ++a
+    (a > b) ? a : b
+
+Statements
+#############
+
+Definition:
+
+    A simple C++ statement is an individual instruction, ending with a semicolon.
+    Executed in the order they appear.
+
+Example:
+
+cpp
+
+int x = 5, y = 6;
+int z = x + y;
+
+
+Flow Control Statements
+#########################
+
+Categories:
+
+    ----Selection Statements:
+        if-else, switch
+
+    ----Iteration Statements:
+        while loop, for loop, Range-based for loop (since C++11)
+
+    ----Jump Statements:
+        goto, break, continue
+
+
+Default Arguments
+###################
+
+Definition:
+
+    Default values for function parameters.
+    Used when a function call doesn't specify an argument for that parameter.
+
+Example:
+
+cpp
+
+int multiply(int a, int b = 1) {
+    return a * b;
+}
+
+Inline Functions
+################
+
+Definition:
+
+    Used for short functions to reduce the overhead of a regular function call.
+    Specified by the inline keyword.
+
+Example:
+
+cpp
+
+inline int square(int a) {
+    return a * a;
+}
+
+Scope and Namespace
+###################
+
+
+Scopes:
+
+    Global Scope: Variable valid from declaration to program end.
+    Block Scope: Variable limited to the block where declared.
+
+Namespaces:
+
+    Used for organizing code and preventing name collisions.
+
+
+Example:
+   # THIS ON IS IMPORTANT. // Accessing namespace members using ::
+----- int main() {
+    // Accessing namespace members using ::
+    std::cout << MyNamespace::myVariable << std::endl;
+    MyNamespace::myFunction();
     return 0;
 }
-```
 
-**Flashcard 6**
-- **Topic**: Basic Input/Output
-- C++ uses streams for input and output operations.
-- Examples: cin (input), cout (standard output), cerr (standard error), clog (standard logging).
 
-**Flashcard 7**
-- **Topic**: Keywords and Identifiers
-- Keywords are reserved words in C++ (e.g., int, class).
-- Identifiers are user-defined names for variables, functions, etc.
-- Identifiers must start with a letter or underscore, followed by letters, digits, or underscores.
+----- using namespace MyNamespace;
 
-**Flashcard 8**
-- **Topic**: Data Types
-- Fundamental types include integral types (int, char), floating-point types (float, double), void, and nullptr.
-- Compound types include arrays, pointers, references, functions, classes, and enumerations.
+    std::cout << myVariable << std::endl;
+    myFunction();
+    return 0;
 
-**Flashcard 9**
-- **Topic**: References
-- References provide aliases to existing variables.
-- Useful for efficient function parameter passing.
-- Syntax: `data-type & reference-name = variable-name`.
+Static Variables
+#################
 
-**Flashcard 10**
-- **Topic**: Pointers
-- Pointers store memory addresses.
-- Syntax: `data-type* pointer-name = &variable`.
-- Dereferencing with `*ptr` accesses the value pointed to.
+Definition:
 
-**Flashcard 11**
-- **Topic**: Dynamic Memory Allocation
-- `new` allocates dynamic memory and returns a pointer.
-- `delete` frees dynamically allocated memory to prevent memory leaks.
+    Variables that retain values and are not destroyed after going out of scope.
+    Example: static int s_id{ 0 };
+
+Function Overloading
+#####################
+
+Definition:
+
+    Multiple functions with the same name but different parameter lists.
+    Return type alone can't distinguish overloads.
+
+Example:
+
+cpp
+
+int add(int a, int b) { return a + b; }
+int add(int a, int b, int c) { return a + b + c; }
+
+Flashcard 11: Strings in C++
+
+Usage:
+
+    C++ has a string class for string manipulation.
+    Example: std::string str1 = "Hello";
+
+Flashcard 12: The Stack and the Heap
+
+Overview:
+
+    The stack and heap are memory storage areas.
+    Stack: Local variables, function calls.
+    Heap: Dynamic memory allocation.
+
+Flashcard 13: Comparison Between C and C++
+
+C vs C++:
+
+    C: Procedure-oriented, lightweight, no data encapsulation.
+    C++: Object-oriented, lightweight, supports data encapsulation.
