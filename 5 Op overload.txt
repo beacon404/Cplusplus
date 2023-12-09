@@ -1,0 +1,73 @@
+Summary of Chapter 5: Operator Overloading
+############################################
+
+
+1. Introduction to Operator Overloading
+#########################################
+
+-Operators in C++ are implemented as functions.
+    Operating Overloading is same as Function overloading can be used to define custom versions of operators for different data types.
+
+--- All operators can be overloaded except
+● Class member access operator (., .*)
+● Scope resolution operator(::)
+● Size operator (sizeof)
+● Conditional operator ( ? : )
+● typeid, and
+● the casting operators (e.g., dynamic_cast))
+
+Operators can be overloaded in 3 ways:
+#####################################
+
+
+1. Using member functions
+2. Using friend functions
+3. Using normal functions
+
+2. Overloading Unary Operators
+###############################
+
+    - Unary operators act on a single operand.
+    Examples include increment (++), decrement (--), unary minus (-), and not (!).
+
+    - Overloading unary operators using member functions requires one less argument than the number of operands.
+
+3. Overloading Binary Operators
+#################################
+
+    Binary operators act on two operands.
+    Overloading binary operators involves adding the overloaded function as a member function of the left operand.
+
+4. Overloading Binary Operators Using Friend Functions
+
+    Friend functions can access private members of a class.
+    Overloading binary operators using friend functions requires one argument for a unary operator and two for a binary operator.
+
+5. Overloading Operators Using Normal Functions
+
+    Normal functions can be used to overload operators similar to friend functions.
+    Use normal functions when overloading binary operators that do not modify their left operands.
+
+6. Copy Assignment Operator
+
+    The copy assignment operator (=) is overloaded to define object assignment.
+    Follows the Rule of 3: If a class defines a destructor, copy constructor, or copy assignment operator, it should define all three.
+
+7. Lab Exercises
+
+    Examples of exercises involving overloading operators for a Vector class.
+
+8. Limitations on Operator Overloading
+
+    Not all operators can be overloaded, and new operators cannot be created.
+    At least one operand in an overloaded operator must be a user-defined type.
+
+9. Recommendations for Operator Overloading
+
+    Guidelines on when to use member functions, friend functions, or normal functions for operator overloading.
+
+10. Conclusion
+
+    Operator overloading provides flexibility and allows for more natural syntax in C++.
+    Various examples and exercises demonstrate the application of operator overloading in different scenarios.
+

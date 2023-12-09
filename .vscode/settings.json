@@ -98,7 +98,10 @@
     "sstream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "chrono": "cpp",
+    "semaphore": "cpp",
+    "valarray": "cpp"
   },
   "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
