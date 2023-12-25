@@ -1,22 +1,23 @@
-//############### first Way #############
+// ############### first Way #############
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// class Car {
-//     public:
-//     string color;
-//     Car(const string& carcolor = "red") : color(carcolor)
-//     {
-//         cout<< "Car color is " << color;
-//     }
-// };
+class Car {
+    public:
+    string color;
+    Car(const string& carcolor = "red") : color(carcolor)
+    {
+        cout<< "Car color is " << color;
+    }
+};
 
 
-// int main () {
-//     Car sanjaycar;
-//     return 0;
-// }
+int main () {
+    Car sanjaycar;
+    cout << sanjaycar.color;
+    return 0;
+}
 
 // ############### Second Way ######################
 

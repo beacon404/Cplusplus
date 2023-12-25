@@ -7,7 +7,7 @@ using namespace std;
 int factorial (int n ) {
 
     if(n<1){
-        throw "n must be greater than 0 ";
+        throw 543;
 
     }
     int result = 1;
@@ -32,10 +32,10 @@ int main()
         int f = factorial(n);
         cout << n << "! =" << f << "\n";    
     }
-        catch (const char*  msg)
+        catch (const int  msg)
         {
-            cerr << "Error" << msg << "\n";
-        } 
+            cerr << "Error " << msg << "\n";
+        }  
         return 0;
     }
 
