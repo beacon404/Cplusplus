@@ -2,7 +2,7 @@
 # How C++ Works
 
 - source code files
--preprocessing - modify above file to preprocessor directives(such as #incldue etc)
+-preprocessing - modify above file to preprocessor directives(such as #incldue etc) 
 - Compilation assembly - machine languages code
 - linking - links the object code with the libraries and produce a single executable file.
 - Executable program 

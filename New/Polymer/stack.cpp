@@ -18,7 +18,7 @@ class arrayStack: public Stack{
     public:
       arrayStack(int size):size(size),topIndex(-1),data(new int[size]){}
 
-      void push(int element){
+      void push(int  element){
         if(topIndex<size-1){
             topIndex++;
             data[topIndex] = element;

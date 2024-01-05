@@ -27,10 +27,10 @@ Time operator+(const Time &t1, const Time &t2){
     d.second += t2.second;
     d.minute += d.second/60;
     d.second %= 60;
-    d.minute += this->minute;
+    d.minute += t2.minute;
     d.hour += d.minute/60;
     d.minute %=60;
-    d.hour +=this->hour;
+    d.hour +=t2.hour;
     return d;
 };
 
@@ -42,6 +42,7 @@ int main () {
 
     Time t = t1+t2;
     t.display();
+    
     return 0;
 
 
