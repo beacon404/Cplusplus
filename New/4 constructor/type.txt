@@ -1,0 +1,32 @@
+1. Default
+
+- Point();
+- Point(int a=0);
+1.1 Implicit constructor
+- int main() { Point p1{}; }
+
+
+2. Parameretized Constructor
+
+- Point(double x){this->x=x};
+- Point(double x): x(x);
+- Point(double x=0): x(x); // deafult value
+
+
+
+3. Copy Constructor
+
+- Distance(const Point &another);
+
+
+Recall variable initialization
+The same applies to objects.
+int y(1); // Direct initialize an integer
+int z{1}; // Uniform initialization of an integer (Only since C++11)
+int x = 1; // Copy initialize an integer
+
+
+
+# constructor overloading is same as function overloading; number and type of parameter did overloading
+
+

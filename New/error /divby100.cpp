@@ -4,23 +4,32 @@ using namespace std;
 
 
 
-int main()
+
+
+int main() 
 {
-    int a;
-
-
-    cout<< "Enter a number" << endl;
-    cin >> a;
-    double b;
-    b = 100/a;
-    cout << b << " is the result.";
 
 
 
 
-
-    return 0;
 }
+// int main()
+// {
+//     int a;
+
+
+//     cout<< "Enter a number" << endl;
+//     cin >> a;
+//     double b;
+//     b = 100/a;
+//     cout << b << " is the result.";
+
+
+
+
+
+//     return 0;
+// }
 
 
 

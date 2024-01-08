@@ -2,7 +2,7 @@
 # How C++ Works
 
 - source code files
--preprocessing - modify above file to preprocessor directives(such as #incldue etc) 
+-preprocessing - modify above file to preprocessor directives(such as #incldue et   c) 
 - Compilation assembly - machine languages code
 - linking - links the object code with the libraries and produce a single executable file.
 - Executable program 
@@ -143,6 +143,7 @@ Constants: Typed Constant Expressions
 - Constants that cannot be modified.
 - Example: `const int a = 5;`
 #define MAX 10 // Defines a constant MAX whose value is 10
+// preprocessor defination #define MAX 10
 
 
 Operators: Assignment and Arithmetic

@@ -1,0 +1,3 @@
+
+// Forward declarations
+class kilogramgram;

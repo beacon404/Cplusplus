@@ -3,7 +3,7 @@ using namespace std;
 
 class IQueue{
     public:
-      virtual ~IQueue(){}
+      virtual ~IQueue(){};
       virtual void insert(int element) = 0;
       virtual void remove() = 0;
       virtual void front() = 0;
