@@ -29,4 +29,3 @@ int x = 1; // Copy initialize an integer
 
 # constructor overloading is same as function overloading; number and type of parameter did overloading
 
-
