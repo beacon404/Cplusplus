@@ -132,7 +132,8 @@
     "variant": "cpp",
     "complex": "cpp",
     "shared_mutex": "cpp",
-    "typeindex": "cpp"
+    "typeindex": "cpp",
+    "coroutine": "cpp"
   },
   "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

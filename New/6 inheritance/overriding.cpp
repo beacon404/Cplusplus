@@ -36,6 +36,7 @@ class Teacher: public Person, public Employe{
         Teacher(int grade, string name, int salary): grade(grade), Person(name), Employe(salary){}
 
         void print() {
+            Person::print();
             Employe::print();
             cout << "grade: " << grade  ;
         }
@@ -47,7 +48,6 @@ int main(){
     t1.print();
     t1.Employe::print();
     return 0;
-
 }
 
 

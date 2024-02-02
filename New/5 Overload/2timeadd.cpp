@@ -26,17 +26,19 @@ class Time{
 
 
 
-Time Time::operator+(const Time &d1) {
-    Time d = d1;
-    d.second+=this->second;
-    d.minute+=this->minute;
-    d.minute+=d.second/60;
-    d.second=d.second%60;
-    d.hour+=this->hour;
-    d.hour+=d.minute/60;
-    d.minute=d.minute%60;
+Time Time::operator+(const Time &d) {
+    Time d1= d;
+    d1.second += this->second;
+    d1.minute += d1.second/60;
+    d1.second %= 60;
+    d1.minute += this->minute;
+    d1.hour += d1.minute/60;
+    d1.minute %= 60;
+    d1.hour += this->hour;
 
-    return d;
+
+
+    return d1;
 }
 
 
@@ -44,8 +46,8 @@ Time Time::operator+(const Time &d1) {
 
 int main() {
     // Using your version with cout statements for direct output
-    Time t1(60, 56, 4);
-    Time t2(1,1,1);
+    Time t1(60, 56, 59);
+    Time t2(1,0,1);
 
     Time t3 = t1+t2;
 
