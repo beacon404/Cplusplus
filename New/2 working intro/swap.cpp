@@ -1,4 +1,5 @@
 #include <iostream>
+#define MAX 100
 
 void swapNumbers(int &a, int &b) {
     int temp = a;

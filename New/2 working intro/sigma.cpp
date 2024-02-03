@@ -24,7 +24,8 @@ int main() {
         sumSquaredDiff += diff * diff;
     }
     double standardDeviation = std::sqrt(sumSquaredDiff / (MAX - 1));
-
+    int g =10;
+    cout<< pow(g,2);
     // Output results
     cout << "Mean: " << mean << endl;
     cout << "Standard Deviation: " << standardDeviation << endl;

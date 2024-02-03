@@ -7,7 +7,7 @@
 #include <iostream>
 std::string str("This is global.");
 namespace n1 {
-std::string str("This is inside namespace n.");
+std::string str("This is inside namespace n1.");
 namespace n2 {
 std::string str("This is inside namespace n2 of n1.");
 }

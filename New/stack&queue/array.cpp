@@ -27,20 +27,16 @@ class arrayStack: public Stack {
             topIndex++;
             data[topIndex] = element;
             cout<<"inserted"<<endl;
-            
-
         }
         else
         throw("stack is full");
     }
+
     virtual void pop() {
         if(topIndex>=0)
         {
             cout<<data[topIndex]<<" is poped"<<endl;
-            --topIndex;
-            
-            
-            
+            --topIndex;  
         }
         else
         throw("stack is empty");

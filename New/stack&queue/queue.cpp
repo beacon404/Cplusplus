@@ -2,71 +2,69 @@
 
 using namespace std;
 
-
-
-class Iqueue{
-    public:
-    virtual ~Iqueue(){}
-    virtual void insert(int element){} 
-    virtual void remove(){} 
-    virtual void front(){} 
-    virtual void end(){} 
+class Iqueue {
+public:
+    virtual ~Iqueue() {}
+    virtual void insert(int element) = 0;
+    virtual void remove() = 0;
+    virtual void front() = 0;
+    virtual void end() = 0;
 };
 
-
-class Queue: public Iqueue{
-    private:
+class Queue : public Iqueue {
+private:
     int size;
-    int *data;
+    int* data;
     int topindex;
     int bottomindex;
 
+public:
+    Queue(int size) : size(size), topindex(-1), bottomindex(0), data(new int[size]) {}
 
-    public:
-    Queue(int size):size(size),topindex(-1),bottomindex(0),data (new int[size]){}
-    virtual void insert(int element){
-        if(topindex<size-1)
-        {
+    void insert(int element)  {
+        if (topindex < size - 1) {
             topindex++;
-            data[topindex]= element;
-            cout<< "inserted" << endl; 
+            data[topindex] = element;
+            cout << "Inserted " << element << endl;
         }
-        else{
-            throw "queue is full";
+        else {
+            throw "Queue is full";
         }
-    } 
+    }
 
-    virtual void remove(){
-        if(bottomindex<=topindex){
+    void remove()  {
+        if (bottomindex <= topindex) {
+            cout << "Removed " << data[bottomindex] << endl;
             bottomindex++;
-            cout<< "removed" << endl;
         }
-         else{
-            throw "queue is empty";
+        else {
+            throw "Queue is empty";
         }
-    } 
-    virtual void front(){
-         if(bottomindex<=topindex){
-            cout<< data[bottomindex]<< "removed" << endl;
+    }
+
+    void front()  {
+        if (bottomindex <= topindex) {
+            cout << "Front: " << data[bottomindex] << endl;
         }
-         else{
-            throw "queue is empty";
+        else {
+            throw "Queue is empty";
         }
-    } 
-    virtual void end(){
-        if(bottomindex<=topindex){
-            cout<< data[topindex]<< "removed" << endl;
+    }
+
+    void end()  {
+        if (bottomindex <= topindex) {
+            cout << "End: " << data[topindex] << endl;
         }
-         else{
-            throw "queue is empty";
+        else {
+            throw "Queue is empty";
         }
-    } 
+    }
 };
 
-int main () {
-    Iqueue *s = new Queue(4);
+int main() {
+    Iqueue* s = new Queue(4);
 
-    try{
+    try {
         s->insert(3);
         s->insert(4);
         s->insert(8);
@@ -74,11 +72,12 @@ int main () {
         s->remove();
         s->end();
         s->front();
-
-
     }
-    catch(const char *msg)
-    {
-        cerr<< msg<< endl;
+    catch (const char* msg) {
+        cerr << msg << endl;
     }
+
+    delete s;  // Don't forget to delete the allocated object
+
+    return 0;
 }
